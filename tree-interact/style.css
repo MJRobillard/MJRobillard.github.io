@@ -1,0 +1,128 @@
+body {
+	font: 12pt/18pt 'Roboto Condensed', sans-serif;
+	font-weight: 400;
+	background: radial-gradient(rgb(51, 0, 0), rgb(0, 0, 37));
+	position: relative;
+	height: 100%;
+	max-height: 100%;
+	opacity: 1;
+	width:min(20%,500px)
+
+  }
+
+
+  .back_container {
+	position: absolute;
+	width:min(100%,950px);
+
+	  
+  }
+  
+  .image3_container {
+	overflow: hidden;
+	/* Prevent content from overflowing and causing horizontal scroll */
+	position: absolute;
+	top: 140px;
+	left: 0px;
+	animation: rotate-animation 300s infinite;
+  }
+
+  @keyframes rotate-animation {
+	0% {
+		
+	  motion-rotation: rotate(0deg);
+	}
+	100% {
+		motion-rotation: rotate(360deg);
+	}
+  }
+  
+  .modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 999;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 2s ease-out;
+  }
+  
+  .modal.open {
+	opacity: 1;
+	visibility: visible;
+  }
+  
+	  .modal-content {
+		background-color: transparent;
+		padding: 20px;
+		border-radius: 5px;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+	  }
+  
+	  /* Slideshow styles */
+	  .slideshow-container {
+		position: relative;
+		max-width: 600px;
+		margin: 0 auto;
+	  }
+  
+	  .slideshow-image {
+		display: none;
+		width: 100%;
+		height: auto;
+		opacity: 1;
+	  }
+  
+	  .slideshow-image.active {
+		display: block;
+	  }
+  
+	  .slideshow-header {
+		  position: absolute;
+		  top: 10%;
+		  left: 50%;
+		  transform: translate(-50%, -50%);
+		  color: #fff;
+		  font-size: 20px;
+		  font-weight: bold;
+		  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+		}
+		
+		.slideshow-caption {
+		  position: absolute;
+		  bottom: 10%;
+		  left: 50%;
+		  transform: translateX(-50%);
+		  color: #fff;
+		  font-size: 14px;
+		  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+		}
+		
+  
+	  .prev,
+	  .next {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		font-size: 30px;
+		font-weight: bold;
+		color: #fff;
+		background-color: rgba(0, 0, 0, 0.5);
+		padding: 10px;
+		border-radius: 50%;
+		cursor: pointer;
+	  }
+  
+	  .prev {
+		left: 80px;
+	  }
+  
+	  .next {
+		right: 10px;
+	  }

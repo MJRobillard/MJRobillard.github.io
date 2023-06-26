@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Modal Slideshow Example</title>
+  <style>
+    /* Modal styles */
+/* Modal styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 2s ease-out;
+}
+
+.modal.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+    .modal-content {
+      background-color: transparent;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Slideshow styles */
+    .slideshow-container {
+      position: relative;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .slideshow-image {
+      display: none;
+      width: 100%;
+      height: auto;
+      opacity: 1;
+    }
+
+    .slideshow-image.active {
+      display: block;
+    }
+
+    .slideshow-header {
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      
+      .slideshow-caption {
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #fff;
+        font-size: 14px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      
+
+    .prev,
+    .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 30px;
+      font-weight: bold;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .next {
+      right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <button id="Modal">Open Modal</button>
+  <button id="openModalBtn2">Open Modal</button>
+
+
+  
+
+
+  <script>
+    function createModal(link1, link2, link3, caption1, caption2, caption3, header1, header2, header3,url) {
+      var links = [link1, link2, link3];
+      var captions = [caption1, caption2, caption3];
+      var headers = [header1, header2, header3];
+    
+      // Rest of the code remains the same as before...
+      // ...
+      var modalContainer = document.createElement('div');
+      modalContainer.classList.add('modal');
+      modalContainer.id = 'modal';
+    
+      // Create the modal content element
+      var modalContent = document.createElement('div');
+      modalContent.classList.add('modal-content');
+    
+      // Create the slideshow container element
+      var slideshowContainer = document.createElement('div');
+      slideshowContainer.classList.add('slideshow-container');
+    
+      // Create the slideshow images, headers, and captions
+      for (var i = 0; i < links.length; i++) {
+        // Create the image element
+        var image = document.createElement('img');
+        image.classList.add('slideshow-image');
+        if (i === 0) {
+          image.classList.add('active');
+        }
+        image.src = links[i];
+        image.alt = 'Image ' + (i + 1);
+    
+        // Create the header element
+        var header = document.createElement('div');
+        header.classList.add('slideshow-header');
+        header.textContent = headers[i];
+    
+        // Create the caption element
+        var caption = document.createElement('div');
+        caption.classList.add('slideshow-caption');
+        caption.textContent = captions[i];
+        var gitlink = document.createElement('div');
+        caption.classList.add('url');
+        caption.textContent = url;
+    
+        // Append the image, header, and caption to the slideshow container
+        slideshowContainer.appendChild(image);
+        slideshowContainer.appendChild(header);
+        slideshowContainer.appendChild(caption);
+        slideshowContainer.appendChild(gitlink);
+      }
+
+    
+      // Create the previous and next buttons
+      var prevButton = document.createElement('a');
+      prevButton.classList.add('prev');
+      prevButton.setAttribute('onclick', 'changeSlide(-1)');
+      prevButton.innerHTML = '&#10094;';
+    
+      var nextButton = document.createElement('a');
+      nextButton.classList.add('next');
+      nextButton.setAttribute('onclick', 'changeSlide(1)');
+      nextButton.innerHTML = '&#10095;';
+    
+      // Append the slideshow container and buttons to the modal content
+      modalContent.appendChild(slideshowContainer);
+      modalContent.appendChild(prevButton);
+      modalContent.appendChild(nextButton);
+    
+      // Create the close modal button
+      var closeModalBtn = document.createElement('button');
+      closeModalBtn.id = 'closeModalBtn';
+      closeModalBtn.textContent = 'Close Modal';
+    
+      // Append the modal content and close button to the modal container
+      modalContainer.appendChild(modalContent);
+      modalContainer.appendChild(closeModalBtn);
+    
+      // Append the modal container to the body
+      document.body.appendChild(modalContainer);
+    
+    }
+ 
+    
+    // JavaScript code to handle modal and slideshow functionality
+    
+    let currentSlideIndex = 0;
+ 
+
+    
+    function buttonAdd(buttonID) {
+      const openModalBtn = document.getElementById(buttonID);
+      const closeModalBtn = document.getElementById("closeModalBtn");
+      const modal = document.getElementById("modal");
+
+
+      openModalBtn.addEventListener("click", function() {
+        modal.classList.add("open");
+        showSlide(currentSlideIndex);
+      });
+
+      closeModalBtn.addEventListener("click", function() {
+        modal.classList.remove("open");
+      });
+
+      modal.addEventListener("click", function(event) {
+        if (event.target === modal) {
+          modal.classList.remove("open");
+        }
+      });
+  };
+    function changeSlide(n) {
+      const slideshowImages = document.querySelectorAll(".slideshow-image");
+      const slideshowHeaders = document.querySelectorAll(".slideshow-header");
+      const slideshowCaptions = document.querySelectorAll(".slideshow-caption");
+
+      currentSlideIndex += n;
+      if (currentSlideIndex < 0) {
+        currentSlideIndex = slideshowImages.length - 1;
+      } else if (currentSlideIndex >= slideshowImages.length) {
+        currentSlideIndex = 0;
+      }
+      showSlide(currentSlideIndex);
+    }
+
+    function showSlide(index) {
+      const slideshowImages = document.querySelectorAll(".slideshow-image");
+      const slideshowHeaders = document.querySelectorAll(".slideshow-header");
+      const slideshowCaptions = document.querySelectorAll(".slideshow-caption");
+
+      for (let i = 0; i < slideshowImages.length; i++) {
+        slideshowImages[i].classList.remove("active");
+        slideshowHeaders[i].style.display = "none";
+        slideshowCaptions[i].style.display = "none";
+      }
+      slideshowImages[index].classList.add("active");
+      slideshowHeaders[index].style.display = "block";
+      slideshowCaptions[index].style.display = "block";
+    }
+
+
+    createModal(
+      'backgrounds/Home Page.svg',
+      'header_btn/Portfolio Page.svg',
+      'header_btn/Logo.svg',
+      'Caption 1',
+      'Caption 2',
+      'Caption 3',
+      'Header 1',
+      'Header 2',
+      'Header 3',
+      'test.html'
+    );
+  buttonAdd("Modal");
+  buttonAdd("openModalBtn2");
+
+  </script>
+</body>
+</html>

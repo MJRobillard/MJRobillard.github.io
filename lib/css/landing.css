@@ -1,0 +1,138 @@
+body {
+    background: black;
+    margin: 0;
+    padding: 0;
+  }
+  .container{
+    height:300px;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    background:transparent;
+    top:50px;
+    position:absolute;
+
+  }
+  .text, .text2 {
+    color : #ffffff;
+    background:transparent;
+    word-spacing:50px;
+    font-size:70px;
+    font-family:'Freeline',Arial, Helvetica, sans-serif;
+    animation: glow 20s linear infinite;
+
+  }
+  .text{
+    filter: drop-shadow(0px 0px 4px #c20808) ;
+
+  }
+  .text2{
+    padding-left:80px; /* Add desired padding value */
+    filter: drop-shadow(0px 0px 4px rgb(0, 60, 116));
+
+  }
+  @font-face {
+    font-family: "Freeline";
+    src: url("FreeLine.woff") format("woff");
+
+    }
+    .gradient {
+      position: absolute;
+      background: transparent;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+  }
+  
+
+  
+
+  
+.neon-wrapper{
+display:inline-flex;
+filter:brightness(500%);
+overflow: hidden;
+
+
+}
+
+@keyframes animation {
+to {
+  transform: translate(50%, 0%);
+}
+}
+  .image_container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .iframe-container {
+    position: absolute;
+    width: 100%;
+    height: 1080px;
+    top: 900px;
+  }
+  
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  H1{
+    font-size:larger;
+    left:50%;
+    top:100px;
+  }
+  .Explore-More{
+    left: 50%;
+    top:150px;
+
+  }
+  H2{
+    left:10%;
+    top:300px;
+  }
+  p{
+    font-size:small;
+    left:10%;
+    top: 350px;
+  }
+  .About{
+    left:15%;
+    top:400px;
+  }
+  H3{
+    left: 50%;
+    top: 500px;
+  }
+  .See-More{
+    left:50%;
+    top:550px;
+
+  }
+  H4{
+    font-size:small;
+    left:50%;
+    top: 800px;
+  }
+  #Contact{
+    font-size:larger;
+    left:50%;
+    top:850px;
+  }
+  .Closer-Button1{
+    left:75%;
+    top:950px;
+  }
+  .Closer-Button2{
+    left:80%;
+    top:950px;
+  }
+  .Closer-Button3{
+    left:85%;
+    top:950px;
+  }
+  

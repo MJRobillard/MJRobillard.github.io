@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  
+
+  <style>
+    /* Disable horizontal scrolling */
+
+
+/* Styling the vertical scrollbar */
+/* For Webkit browsers */
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #000000;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #000000;
+}
+
+::-webkit-scrollbar-track:hover {
+  background-color: #000000;
+}
+
+/* For Mozilla Firefox */
+/* Width and background color of scrollbar */
+html {
+  scrollbar-width:none;
+  scrollbar-color: #000000 #000000;
+}
+
+/* Color of scrollbar thumb */
+html::-moz-scrollbar-track {
+  background-color: #000000;
+}
+
+/* Color of scrollbar thumb on hover */
+html::-moz-scrollbar-track:hover {
+  background-color: #000000;
+}
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    
+    .image_container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .iframe-container {
+      position: absolute;
+      max-width: 1920px;
+      width: 1920px;
+      height: 1080px;
+      top: 828px;
+    }
+    
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    H1{
+      font-size:larger;
+      left:50%;
+      top:100px;
+    }
+    .Explore-More{
+      left: 50%;
+      top:150px;
+
+    }
+    H2{
+      left:10%;
+      top:300px;
+    }
+    p{
+      font-size:small;
+      left:10%;
+      top: 350px;
+    }
+    .About{
+      left:15%;
+      top:400px;
+    }
+    H3{
+      left: 50%;
+      top: 500px;
+    }
+    .See-More{
+      left:50%;
+      top:550px;
+
+    }
+    H4{
+      font-size:small;
+      left:50%;
+      top: 800px;
+    }
+    #Contact{
+      font-size:larger;
+      left:50%;
+      top:850px;
+    }
+    .Closer-Button1{
+      left:75%;
+      top:950px;
+    }
+    .Closer-Button2{
+      left:80%;
+      top:950px;
+    }
+    .Closer-Button3{
+      left:85%;
+      top:950px;
+    }
+    
+
+  </style>
+</head>
+<body>
+  <div class="image_container">
+    <img src="Portfolio Page.svg" scrol id="home">
+
+  </div>
+  <div class = Header-Buttons>
+  
+  </div>
+  <div class = Header-Buttons-Title>
+  
+  </div>
+  
+  <H1>
+    Matt Robillard
+  </H1>
+  <div class = "Explore-More">
+
+  </div>
+  <div class = "iframe-container">
+    <iframe src="ap-fullscreen-modal\example.html"  scrolling="no" ></iframe>
+  </div>
+  <p>
+    I am a Sophomore studying...
+  </p>
+  <div class = "About">
+  </div>
+  <H3>
+    Project Highlights
+  </H3>
+  <div class = "See-More">
+    
+  </div>
+  <H4>
+    Get in Touch
+  </H4>
+  <p id = Contact>
+    Robillard.matthew22@gmail.com
+  </p>
+  <div class = "Closer-Button1">
+  </div>
+  <div class = "Closer-Button2">
+  </div>
+  <div class = "Closer-Button3">
+  </div>
+</body>
+<script>
+
+
+  function addButton(svg_link, text, X, Y, destination) {
+    var containerElement = document.querySelector('.Header-Buttons'); // Get the container element
+  
+    // Create the anchor element
+    var aElement = document.createElement("a");
+    aElement.className = destination + "-button";
+    aElement.href = destination;
+  
+    // Create the image element
+    var imgElement = document.createElement("img");
+    imgElement.src = svg_link;
+    imgElement.alt = destination + " button";
+    aElement.appendChild(imgElement);
+  
+    // Create the text element
+    var textElement = document.createElement("p");
+    textElement.innerText = text;
+    textElement.className = "button-text";
+  
+    // Set the styles for the anchor element
+    aElement.style.cssText = `
+      position: absolute;
+      left: ${X}px;
+      top: ${Y}px;
+      transition: box-shadow 0.3s ease-in-out;
+      opacity: 1;
+      color: red;
+      z-index: 0;
+      text-align: center;
+
+    `;
+  
+    // Set the styles for the text element
+    textElement.style.cssText = `
+      position: absolute;
+      opacity: 1;
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      z-index: 1;
+      text-align: center;
+      top: 5%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    `;
+    aElement.addEventListener('mouseover', function() {
+      this.style.opacity = '1';
+      this.style.filter=' invert(100%)';
+
+    });
+  
+    aElement.addEventListener('mouseout', function() {
+      this.style.boxShadow = '';
+      this.style.opacity = '1';
+      this.style.filter=' invert(0%)';
+
+    });
+  
+  
+    // Append the text element to the anchor element
+    aElement.appendChild(textElement);
+  
+    // Append the anchor element to the container element
+    containerElement.appendChild(aElement);
+  
+    return aElement;
+  
+  
+  }
+  addButton("btn.svg",'About Me',849,34, "Contact.html")
+  addButton("btn.svg",'Home',692,34, "Contact.html")
+  addButton("btn.svg",'Portfolio',1006.4,34, "Portfolio.html")
+  addButton("btn.svg",'Contact',1163.06,34, "Contact.html")
+  addButton("Explore-btn.svg",'',500, 558 , "Contact.html")
+  addButton("See-btn.svg",'',  550,2110 , "Contact.html")
+  addButton("Logo.svg",'',  38,19  , "Contact.html")
+
+
+
+
+
+
+
+
+</script>
+</html>
