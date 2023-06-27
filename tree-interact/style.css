@@ -1,7 +1,7 @@
 body {
 	font: 12pt/18pt 'Roboto Condensed', sans-serif;
 	font-weight: 400;
-	background: radial-gradient(rgb(51, 0, 0), rgb(0, 0, 37));
+	background: radial-gradient(rgb(41, 41, 41), rgb(0, 0, 0));
 	position: relative;
 	height: 100%;
 	max-height: 100%;
@@ -14,26 +14,85 @@ body {
   .back_container {
 	position: absolute;
 	width:min(100%,950px);
+	left:-5%;
+	top:-6%;
 
 	  
   }
+  .glow_container{
+	overflow: hidden;
+	/* Prevent content from overflowing and causing horizontal scroll */
+	position: absolute;
+	top: 375px;
+	left: 102.5%;
+	animation: flicker 60s infinite;
+
+  }
   
+  @keyframes flicker {
+	0% {
+		
+		filter:drop-shadow(0px 0px 3px #ffffff)
+	}
+	2% {
+		
+		filter:drop-shadow(0px 0px 3px #ffffff)
+	}
+	20% {
+		
+		filter:drop-shadow(0px 0px 2px #ffffff)
+	}
+	30% {
+		
+		filter:drop-shadow(0px 0px 4px #ffffff)
+	}
+	40% {
+		filter:drop-shadow(0px 0px 4px #ffffff)
+	}
+	41% {
+		filter:drop-shadow(0px 0px 1px #ffffff)
+	}
+	42% {
+		filter:drop-shadow(0px 0px 5px #ffffff)
+	}
+	43% {
+		filter:drop-shadow(0px 0px 3px #ffffff)
+	}
+	45% {
+		
+		filter:drop-shadow(0px 0px 1px #ffffff)
+	}
+	50% {
+		filter:drop-shadow(0px 0px 5px #ffffff)
+	}
+	60% {
+		
+		filter:drop-shadow(0px 0px 0px #ffffff)
+	}
+	61% {
+		filter:drop-shadow(0px 0px 4px #ffffff)
+	}
+	100%{
+		filter:drop-shadow(0px 0px 5px #ffffff)
+
+	}
+  }
   .image3_container {
 	overflow: hidden;
 	/* Prevent content from overflowing and causing horizontal scroll */
 	position: absolute;
-	top: 140px;
-	left: 0px;
-	animation: rotate-animation 300s infinite;
+	top: 270px;
+	left: 65%;
+	animation: rotate-animation 330s infinite;
   }
 
   @keyframes rotate-animation {
 	0% {
 		
-	  motion-rotation: rotate(0deg);
+	 	transform: rotate(0deg);
 	}
 	100% {
-		motion-rotation: rotate(360deg);
+		transform: rotate(360deg);
 	}
   }
   
