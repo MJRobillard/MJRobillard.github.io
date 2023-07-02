@@ -84,7 +84,7 @@ to {
 }
   .image_container {
     position: relative;
-    width: 100%;
+    width:1384px;
     height: 100%;
     z-index: -100;
   }
