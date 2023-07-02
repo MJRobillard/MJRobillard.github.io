@@ -7,76 +7,95 @@
   
     <title>Robillard Portfolio</title>
     <link rel="stylesheet" href="lib\css\landing.css" type="text/css" media="screen" />
-  
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <script src="lib\js\Landing.js"></script>
   
     <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
   </head>
 
   
 
 
 <body>
+  
+
+
   <div class="image_container">
-    <img src="backgrounds/Home Page.svg" id="home">
+    <img src="backgrounds/Home Page.png" id="home">
 
     </div>
-  <div class = Header-Buttons>
+    <div class = Header-Buttons>
+      <button class="nametag" onclick="location.href='index.html'">
+
+    <img src="header_btn/Nametag.png" alt="Nametag">
+
+</button>
+</div>
+<div id="nav-icon1">
+<span></span>
+<span></span>
+<span></span>
+</div>
+  <ul class="menu">
+    <li><a class="menuItem" href="index.html">Home</a></li>
+    <li><a class="menuItem" href="Portfolio.html">Portfolio</a></li>
+
+    <li><a class="menuItem" href="Contact.html">Contact</a></li>
+    <li><a class="menuItem" href="Contact.html">Resume</a></li>
+
+  </ul>
+
+  <div class ="page_text">
   
-  </div>
-  <div class = Header-Buttons-Title>
-  
-  </div>
+
   
   <H1>
-    Matt Robillard
+    <span> Hi  I</span>
+    <span>'m </span>
+    <span> Matt</span>
   </H1>
-  <div class = "Explore-More">
+  <br>
+  <br>
+  <br>
 
+  <h2>
+    I am a Sophomore at UC Berkeley and I am studying everything from Data Science to Software Development to Full Stack! 
+  </h2>
+  <br>
+  <br>
+  <br>
+
+  <h2>
+    Please don't hesitate to send me a message. If you're in the area I would love to meet for coffee!
+    </h2>
+
+  <br>
+  <br>
+
+  <h2>
+    While you`re here, let me show you some of my projects!
+    </h2>
   </div>
-  <H2>
-    About Me
-  </H2>
-  <p>
-    I am a Sophomore studying...
-  </p>
-  <div class = "About">
-  </div>
-  <H3>
-    Project Highlights
-  </H3>
-  <div class = "See-More">
-    
-  </div>
-  <H4>
-    Get in Touch
-  </H4>
-  <p id = Contact>
-    Robillard.matthew22@gmail.com
-  </p>
-  <div class = "Closer-Button1">
-  </div>
-  <div class = "Closer-Button2">
-  </div>
-  <div class = "Closer-Button3">
   </div>
 </body>
 <script>
 
 
 
-  addButton("header_btn/btn.svg",'About Me',849,34, "Contact.html")
-  addButton("header_btn/btn.svg",'Home',692,34, "Contact.html")
-  addButton("header_btn/btn.svg",'Portfolio',1006.4,34, "Portfolio.html")
-  addButton("header_btn/btn.svg",'Contact',1163.06,34, "Contact.html")
-  addButton("header_btn/Explore-btn.svg",'',500, 558 , "Contact.html")
-  addButton("header_btn/About-btn.svg",'',125,1185  , "Contact.html")
-  addButton("header_btn/See-btn.svg",'',  550,2110 , "Contact.html")
-  addButton("header_btn/Logo.svg",'',  38,19  , "Contact.html")
+
+
+  const menu = document.querySelector(".menu");
+  const menuItems = document.querySelectorAll(".menuItem");
 
 
 
 
+
+  //addButton("header_btn/Logo.svg",'',  38,19  , "index.html")
 
 
 

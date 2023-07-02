@@ -1,20 +1,17 @@
 
 
   let currentSlideIndex = 0;
-  function buttonAdd(buttonID) {
+  function buttonAdd(buttonID,title) {
     const openModalBtn = document.getElementById(buttonID);
-    const closeModalBtn = document.getElementById("closeModalBtn");
-    const modal = document.getElementById("modal");
+    const modal = document.getElementById(title+"modal");
 
 
     openModalBtn.addEventListener("click", function() {
       modal.classList.add("open");
-      showSlide(currentSlideIndex);
+      showSlide(0,title+"modal");
     });
 
-    closeModalBtn.addEventListener("click", function() {
-      modal.classList.remove("open");
-    });
+
 
     modal.addEventListener("click", function(event) {
       if (event.target === modal) {
@@ -23,9 +20,8 @@
     });
 };
 
-  function changeSlide(n) {
-    const slideshowImages = document.querySelectorAll(".slideshow-image");
-
+  function changeSlide(n,modalID) {
+    const slideshowImages = document.querySelectorAll(`#${modalID}.modal .slideshow-image`);
 
     currentSlideIndex += n;
     if (currentSlideIndex < 0) {
@@ -33,14 +29,14 @@
     } else if (currentSlideIndex >= slideshowImages.length) {
       currentSlideIndex = 0;
     }
-    showSlide(currentSlideIndex);
+    showSlide(currentSlideIndex,modalID);
   }
 
-  function showSlide(index) {
-    const slideshowImages = document.querySelectorAll(".slideshow-image");
-    const slideshowHeaders = document.querySelectorAll(".slideshow-header");
-    const slideshowCaptions = document.querySelectorAll(".slideshow-caption");
-
+  function showSlide(index,modalID) {
+    
+    const slideshowImages = document.querySelectorAll(`#${modalID}.modal .slideshow-image`);
+    const slideshowHeaders = document.querySelectorAll(`#${modalID}.modal .slideshow-header`);
+    const slideshowCaptions = document.querySelectorAll(`#${modalID}.modal .slideshow-caption`);
     for (let i = 0; i < slideshowImages.length; i++) {
       slideshowImages[i].classList.remove("active");
       slideshowHeaders[i].style.display = "none";
@@ -53,7 +49,7 @@
   
 
   
-  function createModal(link1, link2, link3, caption1, caption2, caption3, header1, header2, header3,url) {
+  function createModal(title,link1, link2, link3, caption1, caption2, caption3, header1, header2, header3,url) {
     var links = [link1, link2, link3];
     var captions = [caption1, caption2, caption3];
     var headers = [header1, header2, header3];
@@ -62,7 +58,7 @@
     // ...
     var modalContainer = document.createElement('div');
     modalContainer.classList.add('modal');
-    modalContainer.id = 'modal';
+    modalContainer.id = title +'modal';
   
     // Create the modal content element
     var modalContent = document.createElement('div');
@@ -92,27 +88,29 @@
       var caption = document.createElement('div');
       caption.classList.add('slideshow-caption');
       caption.textContent = captions[i];
-      var gitlink = document.createElement('div');
-      caption.classList.add('url');
-      caption.textContent = url;
+
   
       // Append the image, header, and caption to the slideshow container
       slideshowContainer.appendChild(image);
       slideshowContainer.appendChild(header);
       slideshowContainer.appendChild(caption);
-      slideshowContainer.appendChild(gitlink);
     }
+    var gitlink = document.createElement('div');
+    gitlink.classList.add('url');
+    gitlink.textContent = url;
+    slideshowContainer.appendChild(gitlink);
+
 
 
     // Create the previous and next buttons
     var prevButton = document.createElement('a');
     prevButton.classList.add('prev');
-    prevButton.setAttribute('onclick', 'changeSlide(-1)');
+        prevButton.setAttribute('onclick', `changeSlide(-1, '${title}modal')`);
     prevButton.innerHTML = '&#10094;';
   
     var nextButton = document.createElement('a');
     nextButton.classList.add('next');
-    nextButton.setAttribute('onclick', 'changeSlide(1)');
+    nextButton.setAttribute('onclick', `changeSlide(1, '${title}modal')`);
     nextButton.innerHTML = '&#10095;';
   
     // Append the slideshow container and buttons to the modal content
@@ -121,13 +119,10 @@
     modalContent.appendChild(nextButton);
   
     // Create the close modal button
-    var closeModalBtn = document.createElement('button');
-    closeModalBtn.id = 'closeModalBtn';
-    closeModalBtn.textContent = 'Close Modal';
+
   
     // Append the modal content and close button to the modal container
     modalContainer.appendChild(modalContent);
-    modalContainer.appendChild(closeModalBtn);
   
     // Append the modal container to the body
     document.body.appendChild(modalContainer);
@@ -150,18 +145,24 @@
       top: ${Y}px;
       left: ${X}px;
       width: 40px;
+
       transition: box-shadow 0.3s ease-in-out;
       border-radius: 50%;
       opacity: 1;
+
     `;
   
     inputElement.addEventListener('mouseover', function() {
+
       this.style.boxShadow = '0px 0px 25px 8px #FFF961, inset 0px 0px 10px 0px #FFE500';
+  
+
       this.style.borderRadius = '50%';
       this.style.opacity = '1';
     });
   
     inputElement.addEventListener('mouseout', function() {
+
       this.style.boxShadow = '';
       this.style.borderRadius = '50%';
       this.style.opacity = '1';
@@ -176,6 +177,7 @@
 
     // JavaScript code to handle modal and slideshow functionality
     createModal(
+      title,
       link1,
       link2,
       link3,
@@ -187,8 +189,7 @@
       header3,
       url,
     );
-  buttonAdd(title + "-modal");
-  buttonAdd("openModalBtn2");
+  buttonAdd(title + "-modal",title);
 
 
   }

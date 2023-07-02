@@ -1,15 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="lib\css\landing.css" type="text/css" media="screen" />
-    <script src="lib\js\Landing.js"></script>
+  <link rel="stylesheet" href="lib\css\landing.css" type="text/css" media="screen" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script src="lib\js\Landing.js"></script>
 
   
 
   <style>
     /* Disable horizontal scrolling */
 
+.portfolio_page_text{
+    position:absolute;
 
+
+    top:40%;
+    
+    text-align: center;
+    left:10%;
+    width:fit-content;
+    color:white;
+
+  }
+  h1 span:nth-of-type(3){
+
+    position: relative;
+    left:480px;
+    bottom:130px;
+  }
 /* Styling the vertical scrollbar */
 /* For Webkit browsers */
 ::-webkit-scrollbar {
@@ -42,142 +62,60 @@ html::-moz-scrollbar-track:hover {
   background-color: #000000;
 }
 
-    body {
-      margin: 0;
-      padding: 0;
-    }
-    
-    .image_container {
-      position: relative;
-      width: 100%;
-      height: 100%;
-    }
-
-    .iframe-container {
-      position: absolute;
-      max-width: 1920px;
-      width: 1440px;
-      height: 804px;
-      top: 828px;
-    }
-    
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-    H1{
-      font-size:larger;
-      left:50%;
-      top:100px;
-    }
-    .Explore-More{
-      left: 50%;
-      top:150px;
-
-    }
-    H2{
-      left:10%;
-      top:300px;
-    }
-    p{
-      font-size:small;
-      left:10%;
-      top: 350px;
-    }
-    .About{
-      left:15%;
-      top:400px;
-    }
-    H3{
-      left: 50%;
-      top: 500px;
-    }
-    .See-More{
-      left:50%;
-      top:550px;
-
-    }
-    H4{
-      font-size:small;
-      left:50%;
-      top: 800px;
-    }
-    #Contact{
-      font-size:larger;
-      left:50%;
-      top:850px;
-    }
-    .Closer-Button1{
-      left:75%;
-      top:950px;
-    }
-    .Closer-Button2{
-      left:80%;
-      top:950px;
-    }
-    .Closer-Button3{
-      left:85%;
-      top:950px;
-    }
-    
-
-  </style>
+</style>
 </head>
 <body>
-  <div class="image_container">
-    <img src="backgrounds\Portfolio Page.svg" scrol id="home">
-
-  </div>
   <div class = Header-Buttons>
-  
-  </div>
-  <div class = Header-Buttons-Title>
-  
-  </div>
-  
-  <H1>
-    Matt Robillard
-  </H1>
-  <div class = "Explore-More">
+    <button class="nametag" onclick="location.href='index.html'">
+
+  <img src="header_btn/Nametag.png" alt="Nametag">
+
+</button>
+</div>
+<div id="nav-icon1">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<ul class="menu">
+  <li><a class="menuItem" href="index.html">Home</a></li>
+  <li><a class="menuItem" href="Portfolio.html">Portfolio</a></li>
+
+  <li><a class="menuItem" href="Contact.html">Contact</a></li>
+  <li><a class="menuItem" href="Contact.html">Resume</a></li>
+
+</ul>
+  <div class="image_container">
+    <img src="backgrounds\Tech Portfolio.png" scrol id="home">
 
   </div>
+
+
+  
+
+<div class = portfolio_page_text>
+  <H1>
+    <span>Tech</span> 
+    <br>
+    <br>
+    <span> Tree</span>
+    <br>
+     <span class = "h1_spacing">Portfolio</span>
+  </H1>
+</div>
   <div class = "iframe-container">
-    <iframe src="tree-interact\Interact.html"  scrolling="no" ></iframe>
+    <iframe src="tree-interact\Interact.html"  scrolling="no" loading = "lazy" id = 'tree'></iframe>
   </div>
-  <p>
-    I am a Sophomore studying...
-  </p>
-  <div class = "About">
-  </div>
-  <H3>
-    Project Highlights
-  </H3>
-  <div class = "See-More">
-    
-  </div>
-  <H4>
-    Get in Touch
-  </H4>
-  <p id = Contact>
-    Robillard.matthew22@gmail.com
-  </p>
-  <div class = "Closer-Button1">
-  </div>
-  <div class = "Closer-Button2">
-  </div>
-  <div class = "Closer-Button3">
-  </div>
+
 </body>
 <script>
 
-  addButton("header_btn/btn.svg",'About Me',849,34, "Contact.html")
-  addButton("header_btn/btn.svg",'Home',692,34, "index.html")
-  addButton("header_btn/btn.svg",'Portfolio',1006.4,34, "Portfolio.html")
-  addButton("header_btn/btn.svg",'Contact',1163.06,34, "Contact.html")
+
   addButton("header_btn/Explore-btn.svg",'',500, 558 , "Portfolio.html")
   addButton("header_btn/See-btn.svg",'',  550,2110 , "Contact.html")
-  addButton("header_btn/Logo.svg",'',  38,19  , "index.html")
+
+  const menu = document.querySelector(".menu");
+  const menuItems = document.querySelectorAll(".menuItem");
 
 
 
