@@ -260,7 +260,6 @@ to {
     transform: translateY(-100%);
     transition: transform 0.2s;
     top: -60px;
-    left: 55%;
     right: 0;
     bottom: auto;
     z-index: 99;
