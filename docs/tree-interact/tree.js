@@ -142,8 +142,8 @@
   
     inputElement.style.cssText = `
       position: absolute;
-      top: ${Y}px;
-      left: ${X}px;
+      top: ${Y-30}px;
+      left: ${X+15}px;
       width: 40px;
 
       transition: box-shadow 0.3s ease-in-out;

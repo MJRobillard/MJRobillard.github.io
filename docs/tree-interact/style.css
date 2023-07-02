@@ -21,7 +21,7 @@ body {
 	font: 12pt/18pt 'Roboto Condensed', sans-serif;
 	font-weight: 400;
 	background: radial-gradient(rgb(41, 41, 41), rgb(0, 0, 0));
-	position: relative;
+	position: absolute;
 	height: 100%;
 	max-height: 100%;
 	opacity: 1;
@@ -38,15 +38,7 @@ body {
 
 	  
   }
-  .glow_container{
-	overflow: hidden;
-	/* Prevent content from overflowing and causing horizontal scroll */
-	position: absolute;
-	top: 375px;
-	left: 102.5%;
-	animation: flicker 60s infinite;
-
-  }
+ 
   
   @keyframes flicker {
 	0% {
@@ -98,14 +90,20 @@ body {
 	}
   }
   .image3_container {
-	overflow: hidden;
 	/* Prevent content from overflowing and causing horizontal scroll */
 	position: absolute;
-	top: 270px;
-	left: 65%;
+	top: 245px;
+	left:200px;
 	animation: rotate-animation 330s infinite;
   }
+  .glow_container{
+	/* Prevent content from overflowing and causing horizontal scroll */
+	position: absolute;
+	top: 345px;
+	left: 302.5px;
+	animation: flicker 60s infinite;
 
+  }
   @keyframes rotate-animation {
 	0% {
 		
