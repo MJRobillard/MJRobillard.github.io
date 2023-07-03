@@ -33,10 +33,14 @@ body {
     background: black;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width:1384px;
+
+    width:min(100%,1384px);
+
+
+    
+    text-align: center;
+    color:white;
+
 
   }
   .container{
@@ -97,7 +101,7 @@ to {
   }
   
   iframe {
-    width:1384px;
+    width:1377px;
     height: 786px;
     border: none;
   }
@@ -105,10 +109,9 @@ to {
     position:absolute;
 
 
-    top:45%;
-    
+    top:15%;
+    left:30%;
     text-align: center;
-    width:fit-content;
     color:white;
   }
   @keyframes fadeIn {
@@ -276,8 +279,8 @@ to {
   }
   #nav-icon1 {
     z-index: 100000;
-    width: 40px;
-    height: 42px;
+    width: 7%;
+    height: 6.5%;
     position: fixed;
     margin: 50px auto;
     -webkit-transform: rotate(0deg);
@@ -306,7 +309,7 @@ to {
   #nav-icon1 span {
     display: block;
     position: absolute;
-    height: 4px;
+    height: 10%;    
     width: 100%;
     background: #ffffff;
     border-radius: 9px;
