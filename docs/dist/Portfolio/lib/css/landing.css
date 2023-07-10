@@ -1,0 +1,187 @@
+/* Styling the vertical scrollbar */
+/* For Webkit browsers */
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #000000;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #000000;
+}
+
+::-webkit-scrollbar-track:hover {
+  background-color: #000000;
+}
+
+/* For Mozilla Firefox */
+/* Width and background color of scrollbar */
+html {
+  scrollbar-width:none;
+  scrollbar-color: #000000 #000000;
+}
+
+/* Color of scrollbar thumb */
+html::-moz-scrollbar-track {
+  background-color: #000000;
+}
+
+/* Color of scrollbar thumb on hover */
+html::-moz-scrollbar-track:hover {
+  background-color: #000000;
+}
+
+  @font-face {
+    font-family: "Freeline";
+    src: url("FreeLine.woff") format("woff");
+
+    }
+    .gradient {
+      position: absolute;
+      background: transparent;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+  }
+  
+
+  
+
+  
+.neon-wrapper{
+display:inline-flex;
+filter:brightness(500%);
+overflow: hidden;
+
+
+}
+
+@keyframes animation {
+to {
+  transform: translate(50%, 0%);
+}
+}
+  .image_container {
+    position: relative;
+    width:1369px;
+    height: 100%;
+    z-index: -100;
+  }
+
+  .iframe-container {
+    position: absolute;
+    width: 10%;
+    height: 772px;
+    top: 900px;
+  }
+  
+  iframe {
+    width:1369px;
+    height: 772px;
+    border: none;
+  }
+  .page_text{
+    position:absolute;
+
+
+    top:15%;
+    left:30%;
+    text-align: center;
+    color:white;
+  }
+  @keyframes fadeIn {
+    to{
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  h1 span{
+    font-family:'Freeline',Arial, Helvetica, sans-serif;
+    font-size:60px;
+    opacity:0%;
+    font-weight:lighter;
+    word-spacing: 20px;
+    animation:fadeIn 3s ease-out forwards;
+    transform:translateY(30px);
+
+  }
+  h1 span:nth-of-type(1){
+    filter: drop-shadow(0px 0px 2px rgb(250, 64, 64));
+
+  }
+  h1 span:nth-of-type(2){
+    animation-delay: 1s;
+    filter: drop-shadow(0px 0px 2px rgb(255, 102, 102));
+
+  }
+  h1 span:nth-of-type(3){
+    animation-delay: 1.2s;
+    filter: drop-shadow(0px 0px 2px rgb(64, 213, 250));
+
+  }
+
+  
+  h2{
+    font-size:30px;
+    font-family:'Times New Roman', Times, serif,Arial, Helvetica, sans-serif;
+    opacity:0;
+    font-weight:lighter;
+    max-width:600px;
+    animation:fadeIn 3s ease-out forwards;
+    transform:translateY(30px);
+
+  }
+  h2:nth-of-type(1){
+    animation-delay: 1.8s;
+
+
+  }
+  h2:nth-of-type(2){
+    animation-delay: 2.2s;
+
+
+  }
+  h2:nth-of-type(3){
+    animation-delay: 3s;
+  }
+  .About{
+    left:15%;
+    top:400px;
+  }
+  H3{
+    left: 50%;
+    top: 500px;
+  }
+  .See-More{
+    left:50%;
+    top:550px;
+
+  }
+  H4{
+    font-size:small;
+    left:50%;
+    top: 800px;
+  }
+  #Contact{
+    font-size:larger;
+    left:50%;
+    top:850px;
+  }
+  .Closer-Button1{
+    left:75%;
+    top:950px;
+  }
+  .Closer-Button2{
+    left:80%;
+    top:950px;
+  }
+  .Closer-Button3{
+    left:85%;
+    top:950px;
+  }
+
+
+
+  .
