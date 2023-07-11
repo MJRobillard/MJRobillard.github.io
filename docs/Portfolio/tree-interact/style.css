@@ -41,21 +41,32 @@ body {
  
   @keyframes buttonflicker {
 	0% {
-		box-shadow: 0px 0px 25px 8px #FFF961, inset 0px 0px 10px 0px #FFE500;
+		box-shadow: 0px 0px 25px 8px #ffd900, inset 0px 0px 10px 0px #FFE500;
+		border-radius: 50%;
+		opacity: 1;
+	}
+	25% {
+		box-shadow: none;
 		border-radius: 50%;
 		opacity: 1;
 	}
 	50% {
+		box-shadow: 0px 0px 25px 8px #fd0000, inset 0px 0px 10px 0px #ffbb00;
+		border-radius: 50%;
+		opacity: 1;
+	}
+	75% {
 		box-shadow: none;
 		border-radius: 50%;
 		opacity: 1;
 	}
 	100% {
-		box-shadow: 0px 0px 25px 8px #FFF961, inset 0px 0px 10px 0px #FFE500;
+		box-shadow: 0px 0px 25px 8px #ffd900, inset 0px 0px 10px 0px #FFE500;
 		border-radius: 50%;
 		opacity: 1;
 	}
 }
+
 
 
   @keyframes flicker {
@@ -107,10 +118,7 @@ body {
 
 	}
   }
-  .Scraper-button{
 
-	animation: buttonflicker 3s infinite;
-  }
   .image3_container {
 	/* Prevent content from overflowing and causing horizontal scroll */
 	position: absolute;
@@ -224,10 +232,8 @@ body {
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
-		font-size: 30px;
-		font-weight: bold;
+		font-size: 150px;
 		color: #fff;
-		background-color: rgba(0, 0, 0, 0.5);
 		padding: 10px;
 		border-radius: 50%;
 		cursor: pointer;
@@ -238,7 +244,14 @@ body {
 	  .prev {
 		left: 200px;
 	  }
-  
+	  .prev:hover{
+		filter:drop-shadow(0px 0px 3px #ffffff)
+
+	  }
+	  .next:hover{
+		filter:drop-shadow(0px 0px 3px #ffffff)
+
+	  }
 	  .next {
 		right: 200px;
 	  }

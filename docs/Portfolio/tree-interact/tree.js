@@ -160,7 +160,8 @@
 
       border-radius: 50%;
       opacity: 1;
-      animation:buttonflicker 3s infinite;
+      animation: buttonflicker 2s infinite ;
+      
 
     `;
     }
@@ -185,6 +186,7 @@
 
 
       inputElement.addEventListener('click', function() {
+
         console.log('1');
         this.addEventListener('mouseover', function() {
           this.style.boxShadow = '0px 0px 25px 8px #FFF961, inset 0px 0px 10px 0px #FFE500';
