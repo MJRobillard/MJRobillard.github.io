@@ -3833,7 +3833,7 @@ textarea.form-control-lg {
   --bs-navbar-toggler-transition: box-shadow 0.15s ease-in-out;
   position: relative;
   display: flex;
-  flex-wrap:nowrap;
+  flex-wrap:wrap;
   align-items: center;
   font-family:'Courier New', Courier, monospace;
   justify-content: space-between;
