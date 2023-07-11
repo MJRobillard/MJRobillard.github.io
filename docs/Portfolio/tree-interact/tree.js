@@ -151,22 +151,68 @@
       opacity: 1;
 
     `;
-  
-    inputElement.addEventListener('mouseover', function() {
+    if (inputElement.className == "Scraper-button"){
+      inputElement.style.cssText = `
+      position: absolute;
+      top: ${Y-40}px;
+      left: ${X+15}px;
+      width: 40px;
 
-      this.style.boxShadow = '0px 0px 25px 8px #FFF961, inset 0px 0px 10px 0px #FFE500';
-  
+      border-radius: 50%;
+      opacity: 1;
+      animation:buttonflicker 3s infinite;
 
-      this.style.borderRadius = '50%';
-      this.style.opacity = '1';
-    });
-  
-    inputElement.addEventListener('mouseout', function() {
+    `;
+    }
+    if (inputElement.className != "Scraper-button"){
+      inputElement.addEventListener('mouseover', function() {
 
-      this.style.boxShadow = '';
-      this.style.borderRadius = '50%';
-      this.style.opacity = '1';
-    });
+        this.style.boxShadow = '0px 0px 25px 8px #FFF961, inset 0px 0px 10px 0px #FFE500';
+    
+  
+        this.style.borderRadius = '50%';
+        this.style.opacity = '1';
+      });
+    
+      inputElement.addEventListener('mouseout', function() {
+  
+        this.style.boxShadow = '';
+        this.style.borderRadius = '50%';
+        this.style.opacity = '1';
+      });
+    }
+    else{
+
+
+      inputElement.addEventListener('click', function() {
+        console.log('1');
+        this.addEventListener('mouseover', function() {
+          this.style.boxShadow = '0px 0px 25px 8px #FFF961, inset 0px 0px 10px 0px #FFE500';
+      
+    
+          this.style.borderRadius = '50%';
+          this.style.opacity = '1';
+          this.style.transition ="box-shadow 0.3s ease-in-out";
+  
+          this.style.animation='none';
+        });
+
+          this.addEventListener('mouseout', function() {
+  
+            this.style.boxShadow = '';
+            this.style.borderRadius = '50%';
+            this.style.opacity = '1';
+            this.style.transition ="box-shadow 0.3s ease-in-out";
+    
+            this.style.animation='none';
+    
+        });
+      });
+    
+
+    }
+  
+ 
   
     // Append the input element to the container element
     containerElement.appendChild(inputElement);

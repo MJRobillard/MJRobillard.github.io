@@ -39,7 +39,25 @@ body {
 	  
   }
  
-  
+  @keyframes buttonflicker {
+	0% {
+		box-shadow: 0px 0px 25px 8px #FFF961, inset 0px 0px 10px 0px #FFE500;
+		border-radius: 50%;
+		opacity: 1;
+	}
+	50% {
+		box-shadow: none;
+		border-radius: 50%;
+		opacity: 1;
+	}
+	100% {
+		box-shadow: 0px 0px 25px 8px #FFF961, inset 0px 0px 10px 0px #FFE500;
+		border-radius: 50%;
+		opacity: 1;
+	}
+}
+
+
   @keyframes flicker {
 	0% {
 		filter:drop-shadow(0px 0px 0px #6f00ff)
@@ -88,6 +106,10 @@ body {
 		filter:drop-shadow(0px 0px 5px #6f00ff)
 
 	}
+  }
+  .Scraper-button{
+
+	animation: buttonflicker 3s infinite;
   }
   .image3_container {
 	/* Prevent content from overflowing and causing horizontal scroll */
