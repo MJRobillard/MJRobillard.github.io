@@ -34,7 +34,7 @@ body {
     margin: 0;
     padding: 0;
 
-    width:min(100%,1384px);
+    width:min(100%,1350px);
 
 
     
@@ -101,7 +101,7 @@ to {
   }
   
   iframe {
-    width:1377px;
+    width: 1369px;
     height: 772px;
     border: none;
   }
