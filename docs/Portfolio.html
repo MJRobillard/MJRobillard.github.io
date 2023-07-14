@@ -1,23 +1,100 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes" />
-    <meta name="description" content="Portfolio for Matthew Robillard" />
-    <meta name="author" content="Matthew Robillard" />
-    <title>Matthew Robillard Personal Website Portfolio </title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <!-- Font Awesome icons (free version)-->
-    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="Portfolio/lib/css/landing.css" rel="stylesheet" />
+<head>
+  <link rel="stylesheet" href="Portfolio\lib2\css\landing.css" type="text/css" media="screen" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <link href="css/styles.css" rel="stylesheet" />
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Core theme JS-->
+  <script src="js/scripts.js"></script>
+  <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+  <!-- * *                               SB Forms JS                               * *-->
+  <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+  <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+  <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+  <style>
+    /* Disable horizontal scrolling */
+
+.portfolio_page_text{
+    position:absolute;
+
+
+    top:40%;
+    
+    text-align: center;
+    left:10%;
+    width:fit-content;
+    color:white;
+
+  }
+  h1 span:nth-of-type(3){
+
+    position: relative;
+    left:480px;
+    bottom:130px;
+  }
+/* Styling the vertical scrollbar */
+/* For Webkit browsers */
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #000000;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #000000;
+}
+
+::-webkit-scrollbar-track:hover {
+  background-color: #000000;
+}
+
+/* For Mozilla Firefox */
+/* Width and background color of scrollbar */
+html {
+  scrollbar-width:none;
+  scrollbar-color: #000000 #000000;
+}
+
+/* Color of scrollbar thumb */
+html::-moz-scrollbar-track {
+  background-color: #000000;
+}
+
+/* Color of scrollbar thumb on hover */
+html::-moz-scrollbar-track:hover {
+  background-color: #000000;
+}
+.container{
+  top:-123px;
+}
+</style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="description" content="Portfolio for Matthew Robillard" />
+<meta name="author" content="Matthew Robillard" />
+<title>Matthew Robillard Personal Website Portfolio </title>
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+<!-- Font Awesome icons (free version)-->
+<script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+<!-- Google fonts-->
+<link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+<!-- Core theme CSS (includes Bootstrap)-->
+<link href="css/styles.css" rel="stylesheet" />
 </head>
-<body ></body>
+<body id="page-top">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="index.html">Matt Robillard</a>
+            <a class="nav-link" href="#about">Home</a>
+
+    </div>
+</nav>
+<!-- Masthead-->
+ 
   <div class="image_container">
     <img src="Portfolio\backgrounds\Tech Portfolio.png" scrol id="home">
 
@@ -41,60 +118,5 @@
   </div>
 
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Core theme JS-->
-<script src="js/scripts.js"></script>
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-<!-- * *                               SB Forms JS                               * *-->
-<!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-<script sc:\Users\ratth\Downloads\Clean Portfolio\docs\Portfolio2.html c:\Users\ratth\Downloads\Clean Portfolio\docs\lib2rc="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-<style>
-  .html .body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  /* Disable horizontal scrolling */
-  @media (max-width: 767px) {
-    .body {
-      min-width:1369px;
-    }
-  }
-.body{
 
-  min-width: 1369px;
-}
-
-
-.portfolio_page_text{
-  position:absolute;
-
-
-  top:40%;
-  
-  text-align: center;
-  left:10%;
-  width:fit-content;
-  color:white;
-
-}
-h1 span:nth-of-type(3){
-
-  position: relative;
-  left:480px;
-  bottom:130px;
-}
-/* Styling the vertical scrollbar */
-/* For Webkit browsers */
-
-
-/* For Mozilla Firefox */
-/* Width and background color of scrollbar */
-
-.container{
-  height:90px;
-}
-
-</style>
 </html>
