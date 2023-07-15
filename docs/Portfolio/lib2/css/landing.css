@@ -72,7 +72,7 @@ body {
 
   
 
-  button {
+  .button_itself  {
     position: relative;
     background: #444;
     color: #fff;
@@ -86,7 +86,7 @@ body {
     border-radius: 100px;
     }
   
-  button:hover {
+    .button_itself:hover {
     letter-spacing: 0.2rem;
     padding: 1.1rem 3.1rem;
     background: var(--clr);
@@ -95,7 +95,7 @@ body {
     animation: box 3s infinite;
   }
   
-  button::before {
+  .button_itself::before {
     content: "";
     position: absolute;
     inset: 2px;
@@ -103,17 +103,17 @@ body {
     border-radius: 100px;
   }
   
-  button span {
+  .button_itself span {
     position: relative;
     z-index: 1;
   }
-  button i {
+  .button_itself i {
     position: absolute;
     inset: 0;
     display: block;
   }
   
-  button i::before {
+  .button_itself i::before {
     content: "";
     position: absolute;
     width: 10px;
@@ -125,13 +125,13 @@ body {
     transition: 0.2s;
   }
   
-  button:hover i::before {
+  .button_itself:hover i::before {
     width: 15px;
     left: 20%;
     animation: move 3s infinite;
   }
   
-  button i::after {
+  .button_itself i::after {
     content: "";
     position: absolute;
     width: 10px;
@@ -143,7 +143,7 @@ body {
     transition: 0.2s;
   }
   
-  button:hover i::after {
+  .button_itself:hover i::after {
     width: 15px;
     left: 80%;
     animation: move 3s infinite;

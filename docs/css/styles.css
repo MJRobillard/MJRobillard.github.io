@@ -3860,83 +3860,8 @@ textarea.form-control-lg {
   text-decoration: none;
   white-space: nowrap;
   font-family:'Freeline',Arial, Helvetica, sans-serif;
-
-}
-button {
-  position: relative;
-  background: #444;
-  color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
-  border: none;
-  letter-spacing: 0.1rem;
-  font-size: 1rem;
-  padding: 1rem 3rem;
-  transition: 0.2s;
 }
 
-button:hover {
-  letter-spacing: 0.2rem;
-  padding: 1.1rem 3.1rem;
-  background: var(--clr);
-  color: var(--clr);
-  /* box-shadow: 0 0 35px var(--clr); */
-  animation: box 3s infinite;
-}
-
-button::before {
-  content: "";
-  position: absolute;
-  inset: 2px;
-  background: #272822;
-  border-radius: 100px;
-}
-
-button span {
-  position: relative;
-  z-index: 1;
-}
-button i {
-  position: absolute;
-  inset: 0;
-  display: block;
-}
-
-button i::before {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 2px;
-  left: 80%;
-  top: -2px;
-  border: 2px solid var(--clr);
-  background: #272822;
-  transition: 0.2s;
-}
-
-button:hover i::before {
-  width: 15px;
-  left: 20%;
-  animation: move 3s infinite;
-}
-
-button i::after {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 2px;
-  left: 20%;
-  bottom: -2px;
-  border: 2px solid var(--clr);
-  background: #272822;
-  transition: 0.2s;
-}
-
-button:hover i::after {
-  width: 15px;
-  left: 80%;
-  animation: move 3s infinite;
-}
 
 @keyframes move {
   0% {
@@ -11334,3 +11259,79 @@ body {
   padding: 5rem 0;
 }
 
+
+.button_itself {
+  position: relative;
+  background: #444;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  letter-spacing: 0.1rem;
+  font-size: 1rem;
+  padding: 1rem 3rem;
+  transition: 0.2s;
+}
+
+.button_itself:hover {
+  letter-spacing: 0.2rem;
+  padding: 1.1rem 3.1rem;
+  background: var(--clr);
+  color: var(--clr);
+  /* box-shadow: 0 0 35px var(--clr); */
+  animation: box 3s infinite;
+}
+
+.button_itself::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #272822;
+  border-radius: 100px;
+}
+
+.button_itself span {
+  position: relative;
+  z-index: 1;
+}
+.button_itself i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.button_itself i::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  left: 80%;
+  top: -2px;
+  border: 2px solid var(--clr);
+  background: #272822;
+  transition: 0.2s;
+}
+
+.button_itself:hover i::before {
+  width: 15px;
+  left: 20%;
+  animation: move 3s infinite;
+}
+
+.button_itself i::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  left: 20%;
+  bottom: -2px;
+  border: 2px solid var(--clr);
+  background: #272822;
+  transition: 0.2s;
+}
+
+.button_itself:hover i::after {
+  width: 15px;
+  left: 80%;
+  animation: move 3s infinite;
+}
