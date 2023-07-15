@@ -6,6 +6,13 @@
 //
 // Scripts
 // 
+function load(destination) {
+    setTimeout(myURL(destination), 1000);
+ }
+
+ function myURL(destination) {
+    window.open(destination, name = self);
+ }
 
 window.addEventListener('DOMContentLoaded', event => {
 
