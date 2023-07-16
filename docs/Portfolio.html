@@ -85,7 +85,18 @@ html::-moz-scrollbar-track:hover {
 
 }
 
-
+#mobileWarning {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            border-radius: 5px;
+            z-index: 9999;
+        }
 
 
 .button_container{
@@ -154,7 +165,10 @@ body {
   <br>
   <br>
   <br>
-
+  <div id="mobileWarning">
+    <p>This website is optimized for desktop, for your best experience, please use rotate your device or use a desktop device. Thank you.
+          <button onclick="closeMobileWarning()">Close</button>
+</div>
   <br>
 
   <h2 class = "temp">
@@ -182,5 +196,30 @@ body {
   </div>
 
 </body>
+<script>
+          // Function to check if the user is on a mobile device
+          function isMobileDevice() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
+
+        // Function to display the warning if the user is on a mobile device
+        function showMobileWarning() {
+            if (isMobileDevice()) {
+                var mobileWarningPopup = document.getElementById('mobileWarning');
+                mobileWarningPopup.style.display = 'block';
+            }
+        }
+
+        // Function to close the warning popup
+        function closeMobileWarning() {
+            var mobileWarningPopup = document.getElementById('mobileWarning');
+            mobileWarningPopup.style.display = 'none';
+        }
+
+        // Show the warning when the page loads
+        window.onload = function() {
+            showMobileWarning();
+        };
+</script>
 
 </html>
