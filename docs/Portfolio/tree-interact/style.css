@@ -144,7 +144,38 @@ body {
 	}
   }
   
-  .modal {
+
+  .carousel-inner{
+	width:47%;
+
+  }
+  .carousel-control-next, .carousel-control-prev{
+
+	top:280px;
+	height:2px;
+  }
+  .carousel-control-next-icon, .carousel-control-prev-icon {
+    display: inline-block;
+    width: 10rem;
+    height: 10rem;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 100% 100%;
+}
+.captionOveride{
+	position:relative;
+	left:7%;
+	top:20px;
+
+
+}
+.P_Overide{
+
+	max-height: 30px;
+	overflow-y: auto ;
+}
+  .carousel.slide {
+	display: none; /* Hide the carousel by default */
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -157,9 +188,22 @@ body {
 	z-index: 999;
 	opacity: 0;
 	visibility: hidden;
-	transition: opacity 2s ease-out;
+	transition: opacity 1s ease-out;
+	border-radius: 5px;
+	
+
   }
-  
+  .Iconic {
+    position: relative;
+    top: -270px;
+    right: 25%;
+    width: 70px;
+}
+
+  .carousel.slide.open {
+	opacity: 1;
+	visibility: visible;
+  }
   .modal.open {
 	opacity: 1;
 	visibility: visible;
@@ -168,7 +212,6 @@ body {
 	  .modal-content {
 		background-color: transparent;
 		padding: 20px;
-		border-radius: 5px;
 	}
   
 	  /* Slideshow styles */
@@ -184,7 +227,6 @@ body {
 		width: 100%;
 		height: auto;
 		opacity: 1;
-		animation: flicker 60s infinite;
 
 	  }
   
