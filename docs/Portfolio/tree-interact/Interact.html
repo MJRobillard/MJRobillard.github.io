@@ -6,6 +6,15 @@
   <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=100" />
   <meta name="author" content="Matthew Robillard" />
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" type="text/css" media="screen" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Core theme JS-->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=100" />
+  <meta name="author" content="Matthew Robillard" />
+
   <title>Robillard Portfolio</title>
   <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
   <link rel="stylesheet" href="lib/css/ap-fullscreen-modal.css" type="text/css" media="screen" />
@@ -45,8 +54,10 @@
   </div>
 
 
-  <div class="button-container">
+ 
 
+  <div class = "button-container"></div>
+  <div class='courselContainer' id='courselContainer'>
   </div>
 </div>
 
@@ -54,16 +65,16 @@
        // Get the fullscreen button element
     
    
-  addNode("button_svg/Chess Ico.svg",558,502  , "Chess","Slideshow/Chess/Chess 1.png","Slideshow/Chess/Chess 2.png","Slideshow/Chess/Chess 3.png","1","2","3","Python project 1: Text Chess","Approach","Limitations","https://github.com/RockPaperScissor26/HomeMadeChess");
+  addNode("button_svg/Chess Ico.svg",558,502  , "Chess",["Slideshow/Chess/Chess 1.png","Slideshow/Chess/Chess 2.png","Slideshow/Chess/Chess 3.png"],["1","2","3"],["Python project 1: Text Chess","Approach","Limitations"],"https://github.com/RockPaperScissor26/HomeMadeChess");
 
-  addNode("button_svg/Tik-Tak-Toe Icon.svg",508,409.21 ,'Tik-Tak-Toe','Slideshow/Tik/Tik 1.png',"Slideshow/Tik/Tik 2.png","Slideshow/Tik/Tik 3.png","1",'2','3', "One tik at a time: Tik-Tak-Toe","Approach","Limitations","https://github.com/RockPaperScissor26/Tik-Tak-Toe-")
-  addNode("button_svg/Min-A icon.svg",662,583 , "Min-A-Calc","Slideshow/Min/Min.svg","Slideshow/Min/Min.svg","Slideshow/Min/Min.svg",'','','','Embarrassing first steps','Embarrassing first steps','Embarrassing first steps',"https://github.com/RockPaperScissor26/Minumum-A-Calculator");
+  addNode("button_svg/Tik-Tak-Toe Icon.svg",508,409.21 ,'Tik-Tak-Toe',['Slideshow/Tik/Tik 1.png',"Slideshow/Tik/Tik 2.png","Slideshow/Tik/Tik 3.png"],["1",'2','3'],[ "One tik at a time: Tik-Tak-Toe","Approach","Limitations"],"https://github.com/RockPaperScissor26/Tik-Tak-Toe-")
+  addNode("button_svg/Min-A icon.svg",662,583 , "Min-A-Calc",["Slideshow/Min/Min.svg","Slideshow/Min/Min.svg","Slideshow/Min/Min.svg"],['','',''],['Embarrassing first steps','Embarrassing first steps','Embarrassing first steps'],"https://github.com/RockPaperScissor26/Minumum-A-Calculator");
   
-  addNode("button_svg/Folder Icon.svg",662,372.21  , "Folder", "Slideshow/Folder 1/Folder 1 1.png","Slideshow/Folder 1/Folder 1 2.png","Slideshow/Folder 1/Folder 1 3.png","1","2","3","Update PDF metadata by the dozen!", "Helps with document remediation (my job)","One step further...","https://github.com/RockPaperScissor26/folder_metadata_change"); 
-  addNode("button_svg/Folder 2 Icon.svg", 835,392.21  , "Folder2", "Slideshow/Folder 2/Folder 2 1.png","Slideshow/Folder 2/Folder 2 2.png","Slideshow/Folder 2/Folder 2 1.png","1","2","1", "Update PDF metadata by the dozen!","Helps with document remediation (my job)","Update PDF metadata by the dozen!","https://github.com/RockPaperScissor26/folder_metadata_change");
-  addNode("button_svg/Question Icon 1.svg",734, 476, "MissingLink", "Slideshow/Missing Link/Missing Link.svg",  "Slideshow/Missing Link/Missing Link.svg",  "Slideshow/Missing Link/Missing Link.svg","","","","The Missing Link","The Missing Link","The Missing Link","");
+  addNode("button_svg/Folder Icon.svg",662,372.21  , "Folder", ["Slideshow/Folder 1/Folder 1 1.png","Slideshow/Folder 1/Folder 1 2.png","Slideshow/Folder 1/Folder 1 3.png"],["1","2","3"],["Update PDF metadata by the dozen!", "Helps with document remediation (my job)","One step further..."],"https://github.com/RockPaperScissor26/folder_metadata_change"); 
+  addNode("button_svg/Folder 2 Icon.svg", 835,392.21  , "Folder2", ["Slideshow/Folder 2/Folder 2 1.png","Slideshow/Folder 2/Folder 2 2.png",],["1","2"], ["Update PDF metadata by the dozen!","Helps with document remediation (my job)"],"https://github.com/RockPaperScissor26/folder_metadata_change");
+  addNode("button_svg/Question Icon 1.svg",734, 476, "MissingLink", [ "Slideshow/Missing Link/Missing Link.svg"],[""],["The Missing Link"],"");
 
-  addNode("button_svg/Group Icon.svg", 1062,584.21 , "Club-Hub", "Slideshow/Clubhub/Clubhub 1.png","Slideshow/Clubhub/Clubhub 2.png","Slideshow/Clubhub/Clubhub 3.png",'1',`See the Clubhub team contact below:               
+  addNode("button_svg/Group Icon.svg", 1062,584.21 , "Club-Hub",[ "Slideshow/Clubhub/Clubhub 1.png","Slideshow/Clubhub/Clubhub 2.png","Slideshow/Clubhub/Clubhub 3.png"],['1',`See the Clubhub team contact below:               
     Connor Armstrong <cparmstrong5@berkeley.edu>,
     Yash Kumar <yash.vinay.kumar@berkeley.edu>,
     Anushka Mukhopadhyay <amukh946@berkeley.edu>,
@@ -73,20 +84,20 @@
     Saadhvi Lakshmi Narayanan Akila <saadhvinarayanan@berkeley.edu>,
     Srihitha Pallapothula <srihitha@berkeley.edu>,
     Warren Lim <warrenlim_@berkeley.edu>
-    `,'3','Group project: clubhub!',"The team!","Limitations","https://github.com/RockPaperScissor26/node-auth");
-  addNode("button_svg/Backend Icon.svg",963, 639.21, "Clubhub-MongoDB", "Slideshow/Backend/Backend 1.png","Slideshow/Backend/Backend 2.png","Slideshow/Backend/Backend 3.png" ,"1","2","3", "Backend for Clubhub","Hardest Part","Limitations");
+    `,'3'],['Group project: clubhub!',"The team!","Limitations"],"https://github.com/RockPaperScissor26/node-auth");
+  addNode("button_svg/Backend Icon.svg",963, 639.21, "Clubhub-MongoDB", ["Slideshow/Backend/Backend 1.png","Slideshow/Backend/Backend 2.png","Slideshow/Backend/Backend 3.png"] ,["1","2","3"], ["Backend for Clubhub","Hardest Part","Limitations"],'');
    //addNode("button_svg/Phone Icon 1.png",  1270,808  , "CTS-Easedrop-Tool", "My second job at UC Berkeley is essentially tech support for the professors. If they have a problem with the projector or recording devices, they call my department, and I would assist them then submit a ticket containing data about how I helped them, where it was, etc. At that time, the API for Chat GPT came out, so I put it to work using voice recognition to hear what the call was about and a prompt to get the information I needed for a ticket. Yet to be implemented as I want to build a user-friendly GUI.", "Python", "Whisper AI, Chat GPT API");
 
-  addNode("button_svg/Meter Icon.svg",407, 680.21, "Meter", "Slideshow/Meter/Meter 1.png", "Slideshow/Meter/Meter 2.png", "Slideshow/Meter/Meter 3.png",'1','2','3',"Web Scraper for UC Berkeley Weight Room!","Scraping Success","Forward/limitations","https://github.com/RockPaperScissor26/RSF_Meter_Scraper");
+  addNode("button_svg/Meter Icon.svg",407, 680.21, "Meter", ["Slideshow/Meter/Meter 1.png", "Slideshow/Meter/Meter 2.png", "Slideshow/Meter/Meter 3.png"],['1','2','3'],["Web Scraper for UC Berkeley Weight Room!","Scraping Success","Forward/limitations"],"https://github.com/RockPaperScissor26/RSF_Meter_Scraper");
       //addNode("button_svg/RSF analysis Icon 1.png", 23.945, 64.6, "Data-Analysis", "Simple A/B hypothesis testing, statistics, and graphs to show RSF trends and statistical significance", "Python", "Data Science Libraries TO DO"); -->
-  addNode("button_svg/Scraper Icon.svg", 502,715, "WScraper", "Slideshow/Scrape/Bookoo1.png", "Slideshow/Scrape/Bookoo2.png","Slideshow/Scrape/Bookoo3.png",'1','2','3',"Bookoo Web Scraper!","Approach + first time I saw html","limitations","https://github.com/RockPaperScissor26/Bookoo-web-scraper");
-  addNode("button_svg/Portfolio Icon.svg",  1110,682.21, "Portfolio1", "Slideshow/Design1/Design 1.png","Slideshow/Design1/Design 2.png","Slideshow/Design1/Design 3.png",'1','2','3',"THIS WEBSITE! - Inspiration","Vision","Figma!","https://github.com/RockPaperScissor26/Portfolio");
-  addNode("button_svg/Web 2.svg", 1256,658.21, "Portfolio2", "Slideshow/Design2/Design 2 1.png","Slideshow/Design2/Design 2 2.svg","Slideshow/Design2/Design 2 3.png",'1','2','3',"Beyond the Tree","Organization","Design!","https://github.com/RockPaperScissor26/Portfolio");
-  addNode("button_svg/Web 3.svg", 1186,672.21, "Portfolio3", "Slideshow/Design3/Design 3 1.png","Slideshow/Design3/Design 3 2.png","Slideshow/Design3/Design 3 3.png",'1','2','3',"The animations","Make it look easy","Under the Hood, its not easy","https://github.com/RockPaperScissor26/Portfolio");
-  addNode("button_svg/Question Icon 1.svg",993,496.21 , "In-Progress","Slideshow/Question/Question.svg","Slideshow/Question/Question.svg","Slideshow/Question/Question.svg","1","1","1","","","","");
-  addNode("button_svg/Website1 Icon.svg",874,688.21 , "FirstWeb", "Slideshow/Web1/Web1.png","Slideshow/Web1/Web2.png","Slideshow/Web1/Web3.png","1","2","3","First Website!","Approach","Lessons Learnt","https://github.com/RockPaperScissor26/Personal_website_Mark1");
-  addNode("button_svg/RSF analysis Icon 1.svg",280,725 , "Analy", "Slideshow/RSF/RSF1.png","Slideshow/RSF/RSF3.png","Slideshow/RSF/RSF2.png","Data Collected from the web Scraper in the previous project","Next year I may attempt a prediction model, who knows?","Special thanks to my Data 8 TA Lillian Weng for helping!","When is the gym most empty?","Findings","Mechanics","https://github.com/RockPaperScissor26/RSF_Data_Science_Analysis");
-  addNode("button_svg/Phone Icon 1.svg",360,563.21 , "First", "Slideshow/Web1/Web1.png","Slideshow/Web1/Web2.png","Slideshow/Web1/Web3.png","1","2","3","First Website!","Approach","Lessons Learnt","https://github.com/RockPaperScissor26/Personal_website_Mark1");
+  addNode("button_svg/Scraper Icon.svg", 502,715, "WScraper", ["Slideshow/Scrape/Bookoo1.png", "Slideshow/Scrape/Bookoo2.png","Slideshow/Scrape/Bookoo3.png"],['1','2','3'],["Bookoo Web Scraper!","Approach + first time I saw html","limitations"],"https://github.com/RockPaperScissor26/Bookoo-web-scraper");
+  addNode("button_svg/Portfolio Icon.svg",  1110,682.21, "Portfolio1",[ "Slideshow/Design1/Design 1.png","Slideshow/Design1/Design 2.png","Slideshow/Design1/Design 3.png"],['1','2','3'],["THIS WEBSITE! - Inspiration","Vision","Figma!"],"https://github.com/RockPaperScissor26/Portfolio");
+  addNode("button_svg/Web 2.svg", 1256,658.21, "Portfolio2",[ "Slideshow/Design2/Design 2 1.png","Slideshow/Design2/Design 2 2.svg","Slideshow/Design2/Design 2 3.png"],['1','2','3'],["Beyond the Tree","Organization","Design!"],"https://github.com/RockPaperScissor26/Portfolio");
+  addNode("button_svg/Web 3.svg", 1186,672.21, "Portfolio3",[ "Slideshow/Design3/Design 3 1.png","Slideshow/Design3/Design 3 2.png","Slideshow/Design3/Design 3 3.png"],['1','2','3'],["The animations","Make it look easy","Under the Hood, its not easy"],"https://github.com/RockPaperScissor26/Portfolio");
+  addNode("button_svg/Question Icon 1.svg",993,496.21 , "In-Progress",["Slideshow/Question/Question.svg"],["1"],[]);
+  addNode("button_svg/Website1 Icon.svg",874,688.21 , "FirstWeb", ["Slideshow/Web1/Web1.png","Slideshow/Web1/Web2.png","Slideshow/Web1/Web3.png"],["1","2","3","First Website!","Approach","Lessons Learnt"],"https://github.com/RockPaperScissor26/Personal_website_Mark1");
+  addNode("button_svg/RSF analysis Icon 1.svg",280,725 , "Analy", ["Slideshow/RSF/RSF1.png","Slideshow/RSF/RSF3.png","Slideshow/RSF/RSF2.png"],["Data Collected from the web Scraper in the previous project","Next year I may attempt a prediction model, who knows?","Special thanks to my Data 8 TA Lillian Weng for helping!"],["When is the gym most empty?","Findings","Mechanics"],"https://github.com/RockPaperScissor26/RSF_Data_Science_Analysis");
+  addNode("button_svg/Phone Icon 1.svg",360,563.21 , "First", ["Slideshow/Web1/Web1.png","Slideshow/Web1/Web2.png","Slideshow/Web1/Web3.png"],["1","2","3"],["First Website!","Approach","Lessons Learnt"],"https://github.com/RockPaperScissor26/Personal_website_Mark1");
 
 
     
