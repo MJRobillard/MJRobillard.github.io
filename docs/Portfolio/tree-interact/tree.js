@@ -17,7 +17,7 @@
     }
 
     function createCarousel(title,svg_link,slideData){
-
+      
       // Create the carousel container element
       const carouselContainer = document.createElement("div");
       carouselContainer.id = title + "modal";
@@ -189,7 +189,7 @@
       if (inputElement.className != "Scraper-button"){
         inputElement.addEventListener('mouseover', function() {
   
-          this.style.boxShadow = '0px 0px 25px 8px #FFF961, inset 0px 0px 10px 0px #FFE500';
+          this.style.boxShadow = '0px 0px 25px 8px #01f8f8, inset 0px 0px 10px 0px #FFE500';
       
     
           this.style.borderRadius = '50%';
@@ -210,7 +210,7 @@
   
           console.log('1');
           this.addEventListener('mouseover', function() {
-            this.style.boxShadow = '0px 0px 25px 8px #FFF961, inset 0px 0px 10px 0px #FFE500';
+            this.style.boxShadow = '0px 0px 20px 7px #01f8f8, inset 0px 0px 10px 0px #FFE500';
         
       
             this.style.borderRadius = '50%';
