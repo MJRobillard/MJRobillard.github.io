@@ -18,18 +18,28 @@
 
     function createCarousel(title,svg_link,slideData,url){
       let field = ''
+      let projectName = ''
 
       if (title.includes('Soft')){
         field = 'Software Development';
+        projectName = title.replace('Soft','');
+
 
       }
       else if(title.includes('Data')){
         field = 'Data Science';
+        projectName = title.replace('Data','');
+
+
 
       }
       else if(title.includes ('Web')){
         field = "Web Development";
+        projectName = title.replace('Web','');
+
       }
+      projectName = projectName.replace('-',' ');
+
       //name for the Header
       // Create the carousel container element
       const carouselContainer = document.createElement("div");
@@ -40,11 +50,14 @@
       Iconimg.src = svg_link;
       Iconimg.classList.add("b-block", "w-45", 'Iconic');
       Iconimg.alt = 'icon';
-      const fieldHeader = document.createElement("a");
-      fieldHeader.href = url;
+      const fieldHeader = document.createElement("h1");
       fieldHeader.classList.add('field');
       console.log(field);
       fieldHeader.textContent = field;
+      const projectHeader = document.createElement("a");
+      projectHeader.href = url;
+      projectHeader.classList.add('fieldHeader');
+      projectHeader.textContent = projectName;
       // Create the indicators container
       const indicatorsContainer = document.createElement("div");
       indicatorsContainer.classList.add("carousel-indicators");
@@ -142,6 +155,7 @@
 
       // Append the indicators and inner container to the carousel container
       carouselContainer.appendChild(fieldHeader);
+      carouselContainer.appendChild(projectHeader);
       carouselContainer.appendChild(Iconimg);
       carouselContainer.appendChild(carouselInner);
       carouselContainer.appendChild(indicatorsContainer);
