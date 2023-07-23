@@ -146,9 +146,9 @@ body {
   
 
   .carousel-inner{
-	width: 47%;
+	width: 50%;
     top: 10%;
-    left: 3%;
+    left: 11px;
 
   }
   .carousel-control-next, .carousel-control-prev{
@@ -165,16 +165,47 @@ body {
     background-size: 100% 100%;
 }
 .captionOveride{
+	position: inherit;
+    left: 0;
+    right: 0;
+
+}
+.carousel.slide {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-out;
+    border-radius: 5px;
+    flex-direction: column;
+}
+.carousel-indicators {
     position: relative;
-
-    left: -2%;
-    top: 20px;
-
+    right: 0;
+    bottom: 0;
+    left: 11px;
+	top:20px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-right: 15%;
+    margin-bottom: 1rem;
+    margin-left: 15%;
+    list-style: none;
 }
 .P_Overide{
 	max-height: 30px;
     overflow-y: auto;
-    position: relative;
     left: 8px;
 }
   .carousel.slide {
@@ -197,9 +228,8 @@ body {
 
   }
   .Iconic {
-    position: relative;
-    top: -210px;
-    right: 23.2vw;
+	position:relative;
+    top: 50px;
     width: 70px;
 	filter:drop-shadow(0px 0px 4px #01f8f8)
 	
@@ -221,7 +251,6 @@ body {
   
 	  /* Slideshow styles */
 	  .slideshow-container {
-		position: relative;
 		max-width: 600px;
 		margin: 0 auto;
 
@@ -251,7 +280,6 @@ body {
 		}
 		
 		.slideshow-caption {
-		  position: absolute;
 		  top: 102%;
 		  left: 50%;
 		  transform: translateX(-50%);
@@ -503,6 +531,23 @@ body {
   .item-hints .hint:hover .hint-content::before {
 	width: 180px;
 	transition: width 0.4s;
+  }
+  .field{
+	/* Software Development */
+
+
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 300;
+font-size: 55px;
+line-height: 0px;
+/* or 0% */
+text-decoration-line: underline;
+
+color: #FFFFFF;
+
+
   }
   .item-hints .hint-content::after {
 	-webkit-transform-origin: 0 50%;

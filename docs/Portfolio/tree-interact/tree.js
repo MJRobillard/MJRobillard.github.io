@@ -16,8 +16,21 @@
       });
     }
 
-    function createCarousel(title,svg_link,slideData){
-      
+    function createCarousel(title,svg_link,slideData,url){
+      let field = ''
+
+      if (title.includes('Soft')){
+        field = 'Software Development';
+
+      }
+      else if(title.includes('Data')){
+        field = 'Data Science';
+
+      }
+      else if(title.includes ('Web')){
+        field = "Web Development";
+      }
+      //name for the Header
       // Create the carousel container element
       const carouselContainer = document.createElement("div");
       carouselContainer.id = title + "modal";
@@ -27,6 +40,11 @@
       Iconimg.src = svg_link;
       Iconimg.classList.add("b-block", "w-45", 'Iconic');
       Iconimg.alt = 'icon';
+      const fieldHeader = document.createElement("a");
+      fieldHeader.href = url;
+      fieldHeader.classList.add('field');
+      console.log(field);
+      fieldHeader.textContent = field;
       // Create the indicators container
       const indicatorsContainer = document.createElement("div");
       indicatorsContainer.classList.add("carousel-indicators");
@@ -123,9 +141,13 @@
       });
 
       // Append the indicators and inner container to the carousel container
-      carouselContainer.appendChild(indicatorsContainer);
-      carouselContainer.appendChild(carouselInner);
+      carouselContainer.appendChild(fieldHeader);
       carouselContainer.appendChild(Iconimg);
+      carouselContainer.appendChild(carouselInner);
+      carouselContainer.appendChild(indicatorsContainer);
+
+
+      
 
       // Append the generated carousel to the desired element in the DOM
       document.getElementById("courselContainer").appendChild(carouselContainer);
@@ -245,7 +267,7 @@
    
   
       // JavaScript code to handle modal and slideshow functionality
-      createCarousel(title, svg_link,slideData);
+      createCarousel(title, svg_link,slideData,url);
 
       buttonAdd(title + "-modal",title);
   
