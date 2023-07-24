@@ -56,6 +56,8 @@
       fieldHeader.textContent = field;
       const projectHeader = document.createElement("a");
       projectHeader.href = url;
+      projectHeader.target="_blank" ;
+      projectHeader.rel="noopener noreferrer";
       projectHeader.classList.add('fieldHeader');
       projectHeader.textContent = projectName;
       // Create the indicators container
