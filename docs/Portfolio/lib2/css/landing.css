@@ -198,12 +198,12 @@ to {
     position: absolute;
     width:1384px;
     height: 772px;
-    top: 900px;
+    top: 1000px;
   }
   
   iframe {
     width: 1369px;
-    height: 772px;
+    height: 762px;
     border: none;
   }
   .page_text{

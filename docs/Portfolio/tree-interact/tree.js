@@ -38,7 +38,7 @@
         projectName = title.replace('Web','');
 
       }
-      projectName = projectName.replace('-',' ');
+      projectName = projectName.replaceAll('-',' ');
 
       //name for the Header
       // Create the carousel container element
