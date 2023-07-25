@@ -54,10 +54,17 @@
       fieldHeader.classList.add('field');
       console.log(field);
       fieldHeader.textContent = field;
-      const projectHeader = document.createElement("a");
-      projectHeader.href = url;
-      projectHeader.target="_blank" ;
-      projectHeader.rel="noopener noreferrer";
+      var projectHeader = document.createElement("p");
+
+      if (url != ''){
+        projectHeader = document.createElement("a");
+        projectHeader.href = url;
+        projectHeader.target="_blank" ;
+        projectHeader.rel="noopener noreferrer";
+      }
+
+
+
       projectHeader.classList.add('fieldHeader');
       projectHeader.textContent = projectName;
       // Create the indicators container
