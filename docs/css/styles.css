@@ -489,7 +489,9 @@ output {
 iframe {
   border: 0;
 }
-
+.about-section {
+  padding-top: 10vh;
+}
 summary {
   display: list-item;
   cursor: pointer;

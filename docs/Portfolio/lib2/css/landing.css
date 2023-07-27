@@ -196,13 +196,13 @@ to {
 
   .iframe-container {
     position: absolute;
-    width:1384px;
+    width:100vw;
     height: 772px;
-    top: 1000px;
+    top: 800px;
   }
   
   iframe {
-    width: 1369px;
+    width: 100vw;
     height: 762px;
     border: none;
   }
