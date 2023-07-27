@@ -486,7 +486,7 @@ output {
   display: inline-block;
 }
 .about-section {
-  padding-top: 20vh !important;
+  padding-top: 0 !important;
   background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
 }
 
