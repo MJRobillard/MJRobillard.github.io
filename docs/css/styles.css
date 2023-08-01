@@ -116,7 +116,7 @@ body {
   line-height: var(--bs-body-line-height);
   color: var(--bs-body-color);
   text-align: var(--bs-body-text-align);
-  background-color: var(--bs-body-bg);
+  background-color: black;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -11291,7 +11291,12 @@ body {
     width: 0%;
   }
 }
-
+.page-container {
+  display: none;
+  background-color: black;
+  height: 100%;
+  z-index:10000000;
+}
 @media (min-width: 992px) {
   .projects-section .featured-text {
     padding: 0 0 0 2rem;
