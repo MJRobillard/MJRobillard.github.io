@@ -72,9 +72,8 @@ body {
 
   
 
-  .button_itself  {
+  .button_itself {
     position: relative;
-    background: #444;
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
@@ -83,10 +82,8 @@ body {
     font-size: 1rem;
     padding: 1rem 3rem;
     transition: 0.2s;
-    border-radius: 100px;
-    }
-  
-    .button_itself:hover {
+  }
+  .button_itself:hover {
     letter-spacing: 0.2rem;
     padding: 1.1rem 3.1rem;
     background: var(--clr);
