@@ -6124,7 +6124,7 @@ textarea.form-control-lg {
   --bs-spinner-border-width: 0.25em;
   --bs-spinner-animation-speed: 0.75s;
   --bs-spinner-animation-name: spinner-border;
-  border: var(--bs-spinner-border-width) solid currentcolor;
+  border: var(--bs-spinner-border-width) solid blue;
   border-right-color: transparent;
 }
 
